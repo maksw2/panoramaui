@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Fullscreen Image with Left Panel</title>
+  <title>Panorama UI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="left-panel">
     <button class="button" id="button1">
-      <img src="csgo_logo.png" alt="Button 1">
+      <img src="logo.svg" alt="Button 1" style="width: 5em; height: 5em; position: absolute; top: 2%; left: 12%; transition: none; filter: none;"></img>
     </button>
+	<div class="line"></div>
     <button class="button" id="button2">
-      <img src="play.png" alt="Button 2">
+      <img src="joinplayer.svg" alt="Button 2" style="width: 4em; height: 4em; position: absolute; top: 14%; left: 16%;"></img>
     </button>
 	<button class="button" id="button3">
-      <img src="inventory.png" alt="Button 3">
+      <img src="inventory.svg" alt="Button 3" style="position: absolute; top: 23%; left: 22%;"></img>
     </button>
 	<button class="button" id="button4">
-      <img src="watch.png" alt="Button 4">
+      <img src="stream.svg" alt="Button 4" style="position: absolute; top: 30%; left: 22%;"></img>
     </button>
 	<button class="button" id="button5">
-      <img src="settings.png" alt="Button 5">
+      <img src="settings.svg" alt="Button 5" style="position: absolute; top: 38%; left: 22%;"></img>
     </button>
 	<button class="button" id="button6">
-      <img src="quit.png" alt="Button 6">
+      <img src="quit.svg" alt="Button 6" style="position: absolute; top: 93%; left: 25%;"></img>
     </button>
   </div>
-  <img src="csgo.png" alt="Fullscreen Image" class="fullscreen-image">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <model-viewer src="heavy3.glb" autoplay camera-orbit="0deg 50deg 250%" field-of-view="10deg" tone-mapping="aces" shadow-intensity="2" shadow-softness="0"> </model-viewer>
+
+  <img src="bg.png" alt="bg image" class="fullscreen-image">
   <script src="script.js"></script>
 </body>
 </html>

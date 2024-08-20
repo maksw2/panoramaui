@@ -1,0 +1,34 @@
+.popup {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: none; /* Initially hidden */
+}
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .exit-button, .return-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .return-button {
+    background-color: #f44336;
+  }

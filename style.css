@@ -29,13 +29,45 @@ body {
 }
 
 .button {
+  background: none;
   background-color: transparent;
   border: none;
-  color: white;
   cursor: pointer;
 }
 
 .button img {
-  width: 4em; /* Adjust width as needed */
-  height: 4em; /* Adjust height as needed */
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+button:hover img {
+  filter: invert(100%);
+}
+
+.line {
+	position: absolute;
+	top: 11%;
+	left: 50%;
+	width: 5em;
+	height: 1px;
+	background-color: rgba(180,180,180,0.8);
+	transform: translate(-50%, -50%);
+	backdrop-filter: blur(5px);
+}
+
+model-viewer {
+  width: 35%;
+  height: 70%;
+  margin: 20px;
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
