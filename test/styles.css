@@ -1,34 +1,58 @@
-.popup {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  display: none; /* Initially hidden */
+@keyframes start {
+  from { transform: scale(1.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .exit-button, .return-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .return-button {
-    background-color: #f44336;
-  }
+
+@keyframes end {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(1.5); opacity: 0; }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-name: start;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; /* Keep final state after animation */
+}
+
+.popup.closing {
+  animation-name: end;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; /* Keep final state after animation */
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight:   
+ bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body.darkened   
+ {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 0.3s;
+}

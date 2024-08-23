@@ -39,7 +39,7 @@ body {
   width: 3em;
   height: 3em;
   cursor: pointer;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.12s ease-in-out;
 }
 
 button:hover img {

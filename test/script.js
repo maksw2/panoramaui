@@ -1,26 +1,21 @@
 const openPopupButton = document.getElementById('openPopup');
-const popup = document.getElementById('confirmationPopup');
-const exitButton = document.querySelector('.exit-button');
-const returnButton = document.querySelector('.return-button');
+const popup = document.getElementById('popup');
+const body = document.body;
 
-function showPopup() {
+openPopupButton.addEventListener('click', () => {
   popup.style.display = 'block';
-}
-
-function hidePopup() {
-  popup.style.display = 'none';
-}
-
-openPopupButton.addEventListener('click', showPopup);
-
-exitButton.addEventListener('click', () => {
-  // Add your exit logic here
-  console.log('Exiting...');
-  hidePopup();
+  body.classList.add('darkened');
 });
 
-returnButton.addEventListener('click', () => {
-  // Add your return logic here
-  console.log('Returning...');
-  hidePopup();
+const closeButton = document.querySelector('.close');
+  closeButton.addEventListener('click', () => {
+  popup.classList.add('closing');
+});
+
+popup.addEventListener('animationend', () => {
+  if (popup.classList.contains('closing')) {
+    popup.style.display = 'none';
+    popup.classList.remove('closing');
+    body.classList.remove('darkened'); // Remove darkened class after animation
+  }
 });
