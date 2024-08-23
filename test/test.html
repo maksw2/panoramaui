@@ -5,17 +5,31 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button id="openPopup">Open Popup</button>
   <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="close">&times;</span>
-      <h2 id="msgBoxTitle"></h2>
-      <p id="msgBoxText"></p>
-      <div id="msgBoxBtnContent">
-        <button class="msgBoxButton" id="msgBoxBtn1"></button>
-        <button class="msgBoxButton" id="msgBoxBtn2"></button>
+    <div id="guh">
+      <div class="popup-header-content">
+        <h3 id="msgBoxTitle">Developing Purposes</h2>
+        <!-- <span class="close">&times;</span> -->
+      </div> 
+      <div class="popup-content">
+        <p id="msgBoxText">This is a (bad) replica of the CS:GO message box.</p>
+        <div id="msgBoxBtnContent">
+          <button class="msgBoxButton" id="msgBoxBtn1">Button 1</button>
+          <button class="msgBoxButton" id="msgBoxBtn2">Button 2</button>
+          <button class="msgBoxButton" id="msgBoxBtn3">Button 3</button>
+          <button class="msgBoxButton" id="msgBoxBtn4">Button 4</button>
+          <button class="msgBoxButton" id="msgBoxBtn5">Button 5</button>
+          <button class="msgBoxButton" id="msgBoxBtn6">Button 6</button>
+        </div>
       </div>
     </div>
+  </div>
+
+  <button id="openPopup">Open Popup</button>
+
+  <div id="moreInfoContainer" style="display: none;">
+    <iframe src="info-placeholder.html"></iframe>
+    <button id="moreInfoBtnClose">Close</button>
   </div>
   <script src="script.js"></script>
 </body>
