@@ -10,6 +10,7 @@
 
 .popup {
   display: none;
+  background-color: gray;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -28,8 +29,8 @@
   animation-fill-mode: forwards; /* Keep final state after animation */
 }
 
-.popup-content {
-  background-color: #fefefe;
+.popup-content { 
+  background-color: rgb(175, 175, 175);
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -40,7 +41,7 @@
   color: #aaa;
   float: right;
   font-size: 28px;
-  font-weight:   
+  font-weight: Â  
  bold;
 }
 
@@ -51,8 +52,30 @@
   cursor: pointer;
 }
 
-body.darkened   
+body.darkened Â  
  {
   background-color: rgba(0, 0, 0, 0.7);
   transition: background-color 0.3s;
 }
+
+/*msg box stuff*/
+#msgBoxBtnContent {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.msgBoxButton {
+  background-color: transparent;
+  border: none;
+  max-height: 70px;
+  height: 70px;
+  position: relative;
+  right: 10px;
+  transition: all 0.2s;
+}
+
+  .msgBoxButton:hover {
+    background-color: rgba(255, 255, 255, 0.507);
+  }
